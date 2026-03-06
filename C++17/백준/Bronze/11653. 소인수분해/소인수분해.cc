@@ -9,16 +9,16 @@ int main()
     int A;
     cin>>A;
     if(A==1){return 0;}
-    while(A>=2)
+    for(int i = 2; i*i<=A; i++)
     {
-        for(int i = 2; i<=A; i++)
+        while(A%i==0)
         {
-            if(A%i==0)
-            {
-                A= A/i;
-                cout<<i<<"\n";
-                break;
-            }
+            A= A/i;
+            cout<<i<<"\n";
         }
+    }
+    if(A>1)
+    {
+        cout<<A;
     }
 }
