@@ -8,18 +8,15 @@ int main()
 
     int A,x,y;
     cin>>A;
-    vector<int> X;
-    vector<int> Y;
+    int xmax= INT_MIN, xmin = INT_MAX, ymax= INT_MIN, ymin = INT_MAX;
     for(int i = 0; i<A; i++)
     {
         cin>>x>>y;
-        X.push_back(x);
-        Y.push_back(y);
+        xmin= min(xmin,x);
+        xmax= max(xmax,x);
+        ymin= min(ymin,y);
+        ymax= max(ymax,y);
     }
-    int xmin = *min_element(X.begin(),X.end());
-    int xmax = *max_element(X.begin(),X.end());
-    int ymin = *min_element(Y.begin(),Y.end());
-    int ymax = *max_element(Y.begin(),Y.end());
     cout<<(xmax-xmin)*(ymax-ymin);
 
 
