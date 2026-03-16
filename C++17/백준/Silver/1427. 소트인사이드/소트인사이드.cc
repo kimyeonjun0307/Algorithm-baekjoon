@@ -8,14 +8,6 @@ int main()
 
     string A;
     cin>>A;
-    vector<int> v(A.size());
-    for(int i = 0; i<A.size(); i++)
-    {
-        v[i]=A[i] - '0';
-    }
-    sort(v.begin(),v.end(),greater<int>());
-    for(int x: v)
-    {
-        cout<<x;
-    }
+    sort(A.begin(),A.end(),greater<char>());
+    cout<<A;
 }
