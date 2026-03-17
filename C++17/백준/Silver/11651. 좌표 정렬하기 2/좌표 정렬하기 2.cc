@@ -12,18 +12,12 @@ int main()
     for(int i = 0; i<A; i++)
     {
         cin>>x>>y;
-        v[i] = {x,y};
+        v[i] = {y,x};
     }
-    sort(v.begin(),v.end(),[](pair<int,int>a,pair<int,int>b)
-    {
-        if(a.second == b.second)
-        {
-            return a.first<b.first;
-        }
-        return a.second<b.second;
-    });
+    sort(v.begin(),v.end());
     for(int i = 0; i<A; i++)
     {
-        cout<<v[i].first<<" "<<v[i].second<<"\n";
+        cout<<v[i].second<<" "<<v[i].first<<"\n";
     }
-}
+
+}//reference 사용 하는 방법도 알아보기
